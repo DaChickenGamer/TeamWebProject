@@ -1,0 +1,17 @@
+html
+{
+    background-color: #4B56D2;
+}
+div
+{
+    background-color: #472183;
+}
+h1, h2, h3, desc
+{
+    color: #82C3EC;
+}
+/* Placeholder */
+.welcomemessage
+{
+    text-align: center;
+}
