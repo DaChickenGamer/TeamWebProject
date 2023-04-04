@@ -1,71 +1,74 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Homepage</title>
-	<!-- Add Bootstrap CSS stylesheet -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-</head>
-<body>
+	<head>
+		<title>Homepage</title>
+		<!-- Add Bootstrap CSS stylesheet -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-	<!-- Navigation bar with login button -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<div class="container">
-			<a class="navbar-brand" href="#">My Website</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-				<ul class="navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link" href="#">Login</a>
-					</li>
-				</ul>
+		<!-- CSS stylesheet-->
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<!-- Navigation bar with login button -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container">
+				<a class="navbar-brand" href="#">My Website</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="login.html">Login</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Search bar in center of page -->
+		<div class="container mt-5">
+			<div class="row justify-content-center">
+				<div class="col-md-6">
+					<form>
+						<div class="input-group mb-3">
+							<input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
+							<div class="input-group-append">
+								<button class="btn btn-outline-secondary" type="button" id="button-addon2">Go</button>
+							</div>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
-	</nav>
 
-	<!-- Search bar in center of page -->
-	<div class="container mt-5">
-		<div class="row justify-content-center">
-			<div class="col-md-6">
-				<form>
-					<div class="input-group mb-3">
-						<input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
-						<div class="input-group-append">
-							<button class="btn btn-outline-secondary" type="button" id="button-addon2">Go</button>
+		<!-- Article section -->
+		<div class="container mt-5">
+			<h2>Recent Articles</h2>
+			<div class="row mt-4">
+				<div class="col-md-6">
+					<div class="card">
+						<img src="https://via.placeholder.com/300x150.png?text=Article+1" class="card-img-top" alt="Article 1">
+						<div class="card-body">
+							<h5 class="card-title">Article 1</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et quam ac tellus efficitur ultricies. Sed sed sem nec mi ultricies interdum.</p>
+							<a href="#" class="btn btn-primary">Read More</a>
 						</div>
 					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-
-	<!-- Article section -->
-	<div class="container mt-5">
-		<h2>Recent Articles</h2>
-		<div class="row mt-4">
-			<div class="col-md-6">
-				<div class="card">
-					<img src="https://via.placeholder.com/300x150.png?text=Article+1" class="card-img-top" alt="Article 1">
-					<div class="card-body">
-						<h5 class="card-title">Article 1</h5>
-						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et quam ac tellus efficitur ultricies. Sed sed sem nec mi ultricies interdum.</p>
-						<a href="#" class="btn btn-primary">Read More</a>
-					</div>
 				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="card">
-					<img src="https://via.placeholder.com/300x150.png?text=Article+2" class="card-img-top" alt="Article 2">
-					<div class="card-body">
-						<h5 class="card-title">Article 2</h5>
-						<p class="card-text">Sed vulputate, nisi in lobortis tincidunt, odio massa elementum magna, id cursus ipsum augue eu ex. Praesent vitae nibh ac magna dapibus auctor vel vel sapien.</p>
-						<a href="#" class="btn btn-primary">Read More</a>
+				<div class="col-md-6">
+					<div class="card">
+						<img src="https://via.placeholder.com/300x150.png?text=Article+2" class="card-img-top" alt="Article 2">
+						<div class="card-body">
+							<h5 class="card-title">Article 2</h5>
+							<p class="card-text">Sed vulputate, nisi in lobortis tincidunt, odio massa elementum magna, id cursus ipsum augue eu ex. Praesent vitae nibh ac magna dapibus auctor vel vel sapien.</p>
+							<a href="#" class="btn btn-primary">Read More</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-
+	</body>
+</html>
 	<!-- Add Bootstrap JS scripts -->
-	<script src="https://code.jquery.com/jquery
+	<script src="https://code.jquery.com/jquery"

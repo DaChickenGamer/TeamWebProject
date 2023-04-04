@@ -1,5 +1,43 @@
+<!DOCTYPE html>
 <html>
-    <head>        
-        <link rel="stylesheet" type="text/css" href="styles.css">
+    <head>
+        <title>Login Page</title>        
+        <!-- Add Bootstrap CSS stylesheet -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+		<!-- CSS stylesheet-->
+		<link rel="stylesheet" href="style.css"> 
+            
     </head>
+    <body class="login-body">
+        <div class = "login">
+            <h1  class="text-center">Login Page</h1>
+            <form class="needs-validation">
+                <div class = "form-group was-validated">
+                    <label class="form-label" for = "email">Email address</label>
+                    <input class="form-control" type = "email" id="email" title= "" required>
+                    <div class="invalid-feedback">
+                        Please enter your email address
+                    </div>
+                </div>
+
+                <div class = "form-group was-validated">
+                    <label class="form-label" for = "password">Password</label>
+                    <input class="form-control" type = "password" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$"  name="password" title= "" required>
+                    <div class="invalid-feedback">
+                        Please enter your password
+                    </div>
+                </div>
+
+                <div class="form-group form-check">
+                    <input class="form-check-input" type ="checkbox" id = "check">
+                    <label class="form-check-label" for="check">Remember me</label>
+                </div>
+
+                <input class="btn btn-success w-100" type = "submit" value = "SIGN IN">
+            </form>
+        </div>
+    </body>
 </html>
+    <!-- Add Bootstrap JS scripts -->
+    <script src="https://code.jquery.com/jquery"
