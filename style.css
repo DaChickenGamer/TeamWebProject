@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.login-body{
+.login-body {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -16,10 +16,11 @@
     padding: 20px;
     border-radius: 12px;
     background: #ffffff;
+    position: absolute;
 }
 .login h1{
     font-size: 36px;
-    margin-bottom: : 25px;
+    margin-bottom: 25px;
 }
 .login form{
     font-size: 20px;
@@ -40,7 +41,14 @@ h1, h2, h3, desc
     color: #a8c7e4;
 }
 /* Placeholder */
-.welcomemessage
+.login-navbar
 {
+    position: relative;
     text-align: center;
+    width: 100%;
+    bottom: 48%;
+}
+.login-navbar-text
+{
+
 }
