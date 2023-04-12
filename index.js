@@ -1,31 +1,57 @@
-const technologyBtn = document.getElementById("technology");
-const searchBtn = document.getElementById("gaming");
-
+const techNews = document.getElementById("technology");
+const minecraftBtn = document.getElementById("minecraft");
+const gamingBtn = document.getElementById("gaming");
+const newsType = document.getElementById("newsType");
 const newsQuery = document.getElementById("newsQuery");
 const newsdetails = document.getElementById("newsdetails");
+var currentNewsType = document.getElementById("gaming");
+
+currentNewsType.classList.toggle("active");
+
+
+// key 3a221e6657e64dd09b924bd5b4fc7aba
 
 // Array
 var newsDataArr = [];
 
 // apis 
-const API_KEY = "";
-const TECHNOLOGY_NEWS = "https://newsapi.org/v2/top-headlines?country=in&category=technology&pageSize=8&apiKey=";
-const GAMING_NEWS = "https://newsapi.org/v2/everything?q=tesla&from=2023-03-12&sortBy=publishedAt&apiKey=3a221e6657e64dd09b924bd5b4fc7aba"
+const API_KEY = "3a221e6657e64dd09b924bd5b4fc7aba";
+const TECHNOLOGY_NEWS = "https://newsapi.org/v2/top-headlines?country=us&category=technology&pageSize=8&apiKey=";
+const MINECRAFT_NEWS = "https://newsapi.org/v2/everything?q=minecraft&language=en&from=2023-03-12&sortBy=publishedAt&apiKey="
+const GAMING_NEWS = "https://newsapi.org/v2/everything?language=en&q=gaming&from=2023-03-12&sortBy=publishedAt&apiKey="
+
 
 window.onload = function() {
-    newsType.innerHTML="<h4>Headlines</h4>";
-    fetchHeadlines();
+    newsType.innerHTML="<h4>Gaming</h4>";
+    fetchGamingNews();
 };
 
 
-
-
-technologyBtn.addEventListener("click",function(){
+techNews.addEventListener("click",function(){
     newsType.innerHTML="<h4>Technology</h4>";
-    fetchTechnologyNews();
+    fetchTechNews();
+    currentNewsType.classList.toggle("active");
+    currentNewsType = techNews;
+    currentNewsType.classList.toggle("active");
 });
 
-const fetchHeadlines = async () => {
+gamingBtn.addEventListener("click",function(){
+    newsType.innerHTML="<h4>Gaming</h4>";
+    fetchGamingNews();
+    currentNewsType.classList.toggle("active");
+    currentNewsType = gamingBtn;
+    currentNewsType.classList.toggle("active");
+});
+
+minecraftBtn.addEventListener("click",function(){
+    newsType.innerHTML="<h4>Minecraft</h4>";
+    fetchMinecraftNews();
+    currentNewsType.classList.toggle("active");
+    currentNewsType = minecraftBtn;
+    currentNewsType.classList.toggle("active");
+});
+
+const fetchTechNews = async () => {
     const response = await fetch(TECHNOLOGY_NEWS+API_KEY);
     newsDataArr = [];
     if(response.status >=200 && response.status < 300) {
@@ -41,8 +67,7 @@ const fetchHeadlines = async () => {
     displayNews();
 }
 
-
-const fetchBusinessNews = async () => {
+const fetchGamingNews = async () => {
     const response = await fetch(GAMING_NEWS+API_KEY);
     newsDataArr = [];
     if(response.status >=200 && response.status < 300) {
@@ -59,6 +84,21 @@ const fetchBusinessNews = async () => {
 }
 
 
+const fetchMinecraftNews = async () => {
+    const response = await fetch(MINECRAFT_NEWS+API_KEY);
+    newsDataArr = [];
+    if(response.status >=200 && response.status < 300) {
+        const myJson = await response.json();
+        newsDataArr = myJson.articles;
+    } else {
+        // handle errors
+        console.log(response.status, response.statusText);
+        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        return;
+    }
+
+    displayNews();
+}
 
 function displayNews() {
 
