@@ -8,14 +8,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #4B56D2;
+    background-color: #ffffff;
 }
 .login {
     width: 360px;
     height: min-content;
     padding: 20px;
     border-radius: 12px;
-    background: #ffffff;
+    background: #343a40;
     position: absolute;
 }
 .login h1{
@@ -24,6 +24,7 @@
 }
 .login form{
     font-size: 20px;
+    color: #ffffff;
 }
 .login form .form-group{
     margin-bottom: 12px;
