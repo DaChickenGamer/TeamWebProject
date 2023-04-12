@@ -44,3 +44,11 @@ h1, h2, h3, desc
     width: 100%;
     bottom: 48%;
 }
+
+#a {
+    padding-top: 25px;
+}
+
+#articleContainer {
+    background-color: #fbfbfb;
+}
