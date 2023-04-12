@@ -16,9 +16,9 @@ var newsDataArr = [];
 
 // apis 
 const API_KEY = "3a221e6657e64dd09b924bd5b4fc7aba";
-const TECHNOLOGY_NEWS = "https://newsapi.org/v2/top-headlines?country=us&category=technology&pageSize=8&apiKey=";
-const MINECRAFT_NEWS = "https://newsapi.org/v2/everything?q=minecraft&language=en&from=2023-03-12&sortBy=publishedAt&apiKey="
-const GAMING_NEWS = "https://newsapi.org/v2/everything?language=en&q=gaming&from=2023-03-12&sortBy=publishedAt&apiKey="
+const TECHNOLOGY_NEWS = "https://newsapi.org/v2/top-headlines?country=us&category=technology&sortBy=publishedAt&pageSize=16&apiKey=";
+const MINECRAFT_NEWS = "https://newsapi.org/v2/everything?q=minecraft&language=en&from=2023-03-12&pageSize=16&sortBy=publishedAt&apiKey="
+const GAMING_NEWS = "https://newsapi.org/v2/everything?language=en&q=gaming&from=2023-03-12&pageSize=16&sortBy=publishedAt&apiKey="
 
 
 window.onload = function() {
