@@ -1,3 +1,4 @@
+// Variables
 const techNews = document.getElementById("technology");
 const minecraftBtn = document.getElementById("minecraft");
 const gamingBtn = document.getElementById("gaming");
@@ -22,7 +23,6 @@ window.onload = function() {
     newsType.innerHTML="<h4>Gaming</h4>";
     fetchGamingNews();
 };
-
 
 techNews.addEventListener("click",function(){
     newsType.innerHTML="<h4>Technology</h4>";
