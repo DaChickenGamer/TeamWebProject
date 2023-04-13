@@ -30,6 +30,9 @@
 						  <li class="nav-item">
 							<a class="nav-link" aria-current="page" href="articles.html" id="archivednews">Archived News</a>
 						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" aria-current="page" href="#technology-news" id="archievednews">Archieved News</a>
+						  </li>
 						  <!-- To add more article types just
 						  <li class="nav-item">
 							<a class="nav-link active" aria-current="page" href="#archievednews" id="archievednews">Archieved News</a>
@@ -40,8 +43,8 @@
 						  </li>
 						</ul>
 						<form class="d-flex" role="search">
-						  <input class="form-control me-2" type="search" placeholder="Search News">
-						  <button class="btn btn-outline-warning" type="button">Search</button>
+						  <input class="form-control me-2" type="text" id="newQuery" placeholder="Search News">
+						  <button class="btn btn-outline-warning" type="button" id="searchBtn">Search</button>
 						</form>
 					  </div>
 					</div>
@@ -49,7 +52,8 @@
 			</div>
 			<!-- News -->
 			<div>
-
+				<div class="row" id=""newsType></div>
+				<div class="row" id=""newsdetails></div>
 			</div>
 			<!-- Footer -->
 			<div>
