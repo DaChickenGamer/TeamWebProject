@@ -3,16 +3,26 @@
     <head>
         <title>Login Page</title>        
         <!-- Add Bootstrap CSS stylesheet -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
 
 		<!-- CSS stylesheet-->
 		<link rel="stylesheet" href="scripts/style.css"> 
     </head>
     <body class="login-body m-0 p-0">
         <div class ="container-fluid m-0 p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark login-navbar">
-                <a class="nav-link text-warning" href="index.html">Home</a>
+                <!-- Navbar -->
+        <div>
+            <nav class="navbar navbar-expand navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-warning" href="index.html" id="news">HOME</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    </div>
+                </div>
             </nav>
+        </div>
             <div class=" d-flex justify-content-center">
             <div class = "login">
                 <h1  class="text-center">Login Page</h1>
@@ -41,7 +51,6 @@
                     </a>            
                 </form>
             </div>
-        </div>
         </div>
     </body>
 </html>
