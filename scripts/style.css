@@ -4,29 +4,16 @@
     box-sizing: border-box;
 }
 .login-body {
-<<<<<<<< HEAD:scripts/style.css
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-========
     background-color: #4B56D2;
->>>>>>>> NewIndex:style.css
 }
 .login {
     width: 360px;
     height: min-content;
     padding: 20px;
     border-radius: 12px;
-<<<<<<<< HEAD:scripts/style.css
-    background: #343a40;
-    position: absolute;
-========
     background: #ffffff;
     margin-top: 10%;
     display: inline-block;
->>>>>>>> NewIndex:style.css
 }
 .login h1{
     font-size: 36px;
@@ -34,7 +21,6 @@
 }
 .login form{
     font-size: 20px;
-    color: #ffffff;
 }
 .login form .form-group{
     margin-bottom: 12px;
@@ -54,12 +40,4 @@ h1, h2, h3, desc
     text-align: center;
     width: 100%;
     bottom: 48%;
-}
-
-#a {
-    padding-top: 25px;
-}
-
-#articleContainer {
-    background-color: #fbfbfb;
 }
