@@ -1,7 +1,9 @@
 // Variables
 const techNews = document.getElementById("technology");
-const minecraftBtn = document.getElementById("minecraft");
 const gamingBtn = document.getElementById("gaming");
+const minecraftBtn = document.getElementById("minecraft");
+const terrariaBtn = document.getElementById("terraria")
+const indiegameBtn = document.getElementById("indiegame");
 const generalBtn = document.getElementById("news");
 const newsType = document.getElementById("newsType");
 const newsQuery = document.getElementById("newsQuery");
@@ -20,11 +22,13 @@ var newsDataArr = [];
  Boolean operators AND / OR / NOT and brackets are supported so you can do this: q=(crypto AND bitcoin) NOT ethereum
  Limit your search specifically within titles, or content: qInTitle="title search"
  */
-const API_KEY = "3e72a56d294040c1b1a85d9ce5f18ef8";
+const API_KEY = "";
 const TECHNOLOGY_NEWS = "https://newsapi.org/v2/top-headlines?country=us&category=technology&sortBy=publishedAt&pageSize=20&apiKey=";
-const MINECRAFT_NEWS = "https://newsapi.org/v2/everything?q=minecraft&language=en&pageSize=20&sortBy=publishedAt&apiKey="
-const GAMING_NEWS = "https://newsapi.org/v2/everything?language=en&q=gaming&pageSize=20&sortBy=publishedAt&apiKey="
-const GENERAL_NEWS = "https://newsapi.org/v2/everything?language=en&q=indie +game&pageSize=8&sortBy=publishedAt&apiKey="
+const GAMING_NEWS = "https://newsapi.org/v2/everything?language=en&q=((popular AND videogame) OR (top AND videogame))&pageSize=20&sortBy=publishedAt&apiKey=";
+const INDIE_GAME_NEWS = "https://newsapi.org/v2/everything?qinTitle=(indie game)&language=en&pageSize=20&sortBy=publishedAt&apiKey=";
+const MINECRAFT_NEWS = "https://newsapi.org/v2/everything?q=minecraft&language=en&pageSize=20&sortBy=publishedAt&apiKey=";
+const FORTNITE_NEWS = "https://newsapi.org/v2/everything?qinTitle=fortnite&language=en&pageSize=20&sortBy=publishedAt&apiKey=";
+const GENERAL_NEWS = "https://newsapi.org/v2/everything?language=en&q=(video game) +game +technology&pageSize=8&sortBy=publishedAt&apiKey=";
 
 
 window.onload = function() {
@@ -48,6 +52,20 @@ window.onload = function() {
         currentNewsType.classList.toggle("active");
     });
     
+    indiegameBtn.addEventListener("click",function(){
+        newsType.innerHTML="<h4>Terraria</h4>";
+        fetchIndieGameNews();
+        currentNewsType.classList.toggle("active");
+        currentNewsType = indiegameBtn;
+        currentNewsType.classList.toggle("active");
+    });
+    fortniteBtn.addEventListener("click",function(){
+        newsType.innerHTML="<h4>Fortnite</h4>";
+        fetchFortniteNews();
+        currentNewsType.classList.toggle("active");
+        currentNewsType = fortniteBtn;
+        currentNewsType.classList.toggle("active");
+    });
     minecraftBtn.addEventListener("click",function(){
         newsType.innerHTML="<h4>Minecraft</h4>";
         fetchMinecraftNews();
@@ -106,6 +124,36 @@ const fetchGamingNews = async () => {
 
 const fetchMinecraftNews = async () => {
     const response = await fetch(MINECRAFT_NEWS+API_KEY);
+    newsDataArr = [];
+    if(response.status >=200 && response.status < 300) {
+        const myJson = await response.json();
+        newsDataArr = myJson.articles;
+    } else {
+        // handle errors
+        console.log(response.status, response.statusText);
+        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        return;
+    }
+
+    displayNews();
+}
+const fetchIndieGameNews = async () => {
+    const response = await fetch(INDIE_GAME_NEWS+API_KEY);
+    newsDataArr = [];
+    if(response.status >=200 && response.status < 300) {
+        const myJson = await response.json();
+        newsDataArr = myJson.articles;
+    } else {
+        // handle errors
+        console.log(response.status, response.statusText);
+        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        return;
+    }
+
+    displayNews();
+}
+const fetchFortniteNews = async () => {
+    const response = await fetch(FORTNITE_NEWS+API_KEY);
     newsDataArr = [];
     if(response.status >=200 && response.status < 300) {
         const myJson = await response.json();
