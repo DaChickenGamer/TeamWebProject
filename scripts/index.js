@@ -13,12 +13,18 @@ currentNewsType.classList.toggle("active");
 // Array
 var newsDataArr = [];
 
-// apis 
-const API_KEY = "";
-const TECHNOLOGY_NEWS = "https://newsapi.org/v2/top-headlines?country=us&category=technology&sortBy=publishedAt&pageSize=16&apiKey=";
-const MINECRAFT_NEWS = "https://newsapi.org/v2/everything?q=minecraft&language=en&pageSize=16&sortBy=publishedAt&apiKey="
-const GAMING_NEWS = "https://newsapi.org/v2/everything?language=en&q=gaming&pageSize=16&sortBy=publishedAt&apiKey="
-const GENERAL_NEWS = "https://newsapi.org/v2/everything?language=en&q=gaming&pageSize=16&sortBy=publishedAt&apiKey="
+// Apis 
+/*
+ Search with singular keywords, or surround complete phrases with quotation marks for exact-match: q=tesla or q="elon musk"
+ Specify words which must appear in articles, and words that must not, to remove irrelevent results: q=gamestop +stonks -sell
+ Boolean operators AND / OR / NOT and brackets are supported so you can do this: q=(crypto AND bitcoin) NOT ethereum
+ Limit your search specifically within titles, or content: qInTitle="title search"
+ */
+const API_KEY = "3e72a56d294040c1b1a85d9ce5f18ef8";
+const TECHNOLOGY_NEWS = "https://newsapi.org/v2/top-headlines?country=us&category=technology&sortBy=publishedAt&pageSize=20&apiKey=";
+const MINECRAFT_NEWS = "https://newsapi.org/v2/everything?q=minecraft&language=en&pageSize=20&sortBy=publishedAt&apiKey="
+const GAMING_NEWS = "https://newsapi.org/v2/everything?language=en&q=gaming&pageSize=20&sortBy=publishedAt&apiKey="
+const GENERAL_NEWS = "https://newsapi.org/v2/everything?language=en&q=indie +game&pageSize=8&sortBy=publishedAt&apiKey="
 
 
 window.onload = function() {
