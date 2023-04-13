@@ -4,16 +4,19 @@
     box-sizing: border-box;
 }
 .login-body {
-    background-color: #4B56D2;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
 }
 .login {
     width: 360px;
     height: min-content;
     padding: 20px;
     border-radius: 12px;
-    background: #ffffff;
-    margin-top: 10%;
-    display: inline-block;
+    background: #343a40;
+    position: absolute;
 }
 .login h1{
     font-size: 36px;
@@ -21,6 +24,7 @@
 }
 .login form{
     font-size: 20px;
+    color: #ffffff;
 }
 .login form .form-group{
     margin-bottom: 12px;
@@ -40,4 +44,12 @@ h1, h2, h3, desc
     text-align: center;
     width: 100%;
     bottom: 48%;
+}
+
+#a {
+    padding-top: 25px;
+}
+
+#articleContainer {
+    background-color: #fbfbfb;
 }

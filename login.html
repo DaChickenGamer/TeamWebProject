@@ -8,36 +8,40 @@
 		<!-- CSS stylesheet-->
 		<link rel="stylesheet" href="style.css"> 
     </head>
-    <body class="login-body">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark login-navbar">
-            <a class="nav-link text-warning" href="index.html">Home</a>
-        </nav>
-        <div class = "login">
-            <h1  class="text-center">Login Page</h1>
-            <form class="needs-validation" action="index.html">
-                <div class = "form-group was-validated">
-                    <label class="form-label" for = "email">Email address</label>
-                    <input class="form-control" type = "email" id="email" title= "" required>
-                    <div class="invalid-feedback">
-                        Please enter your email address
+    <body class="login-body m-0 p-0">
+        <div class ="container-fluid m-0 p-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark login-navbar">
+                <a class="nav-link text-warning" href="index.html">Home</a>
+            </nav>
+            <div class=" d-flex justify-content-center">
+            <div class = "login">
+                <h1  class="text-center">Login Page</h1>
+                <form class="needs-validation" action="index.html">
+                    <div class = "form-group was-validated">
+                        <label class="form-label" for = "email">Email address</label>
+                        <input class="form-control" type = "email" id="email" title= "" required>
+                        <div class="invalid-feedback">
+                            Please enter your email address
+                        </div>
                     </div>
-                </div>
 
-                <div class = "form-group was-validated">
-                    <label class="form-label" for = "password">Password</label>
-                    <input class="form-control" type = "password" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$"  name="password" title= "" required>
-                    <div class="invalid-feedback">
-                        Please enter your password
+                    <div class = "form-group was-validated">
+                        <label class="form-label" for = "password">Password</label>
+                        <input class="form-control" type = "password" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$"  name="password" title= "" required>
+                        <div class="invalid-feedback">
+                            Please enter your password
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group form-check">
-                    <input class="form-check-input" type ="checkbox" id = "check">
-                    <label class="form-check-label" for="check">Remember me</label>
-                </div>
-                <input class="btn btn-success w-100" type = "submit" value = "SIGN IN">
-                </a>            
-            </form>
+                    <div class="form-group form-check">
+                        <input class="form-check-input" type ="checkbox" id = "check">
+                        <label class="form-check-label" for="check">Remember me</label>
+                    </div>
+                    <input class="btn btn-success w-100" type = "submit" value = "SIGN IN">
+                    </a>            
+                </form>
+            </div>
+        </div>
         </div>
     </body>
 </html>
