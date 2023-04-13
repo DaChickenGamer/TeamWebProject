@@ -2,7 +2,7 @@
 const techNews = document.getElementById("technology");
 const gamingBtn = document.getElementById("gaming");
 const minecraftBtn = document.getElementById("minecraft");
-const terrariaBtn = document.getElementById("terraria")
+const fortniteBtn = document.getElementById("fortnite")
 const indiegameBtn = document.getElementById("indiegame");
 const generalBtn = document.getElementById("news");
 const newsType = document.getElementById("newsType");
@@ -53,7 +53,7 @@ window.onload = function() {
     });
     
     indiegameBtn.addEventListener("click",function(){
-        newsType.innerHTML="<h4>Terraria</h4>";
+        newsType.innerHTML="<h4>Indie Games</h4>";
         fetchIndieGameNews();
         currentNewsType.classList.toggle("active");
         currentNewsType = indiegameBtn;
