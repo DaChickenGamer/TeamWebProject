@@ -22,11 +22,11 @@ var newsDataArr = [];
  Boolean operators AND / OR / NOT and brackets are supported so you can do this: q=(crypto AND bitcoin) NOT ethereum
  Limit your search specifically within titles, or content: qInTitle="title search"
  */
-const API_KEY = "";
+const API_KEY = "3e72a56d294040c1b1a85d9ce5f18ef8";
 const TECHNOLOGY_NEWS = "https://newsapi.org/v2/top-headlines?country=us&category=technology&sortBy=publishedAt&pageSize=20&apiKey=";
 const GAMING_NEWS = "https://newsapi.org/v2/everything?language=en&q=((popular AND videogame) OR (top AND videogame))&pageSize=20&sortBy=publishedAt&apiKey=";
 const INDIE_GAME_NEWS = "https://newsapi.org/v2/everything?qinTitle=(indie game)&language=en&pageSize=20&sortBy=publishedAt&apiKey=";
-const MINECRAFT_NEWS = "https://newsapi.org/v2/everything?q=minecraft&language=en&pageSize=20&sortBy=publishedAt&apiKey=";
+const MINECRAFT_NEWS = "https://newsapi.org/v2/everything?qinTitle=minecraft&language=en&pageSize=20&sortBy=publishedAt&apiKey=";
 const FORTNITE_NEWS = "https://newsapi.org/v2/everything?qinTitle=fortnite&language=en&pageSize=20&sortBy=publishedAt&apiKey=";
 const GENERAL_NEWS = "https://newsapi.org/v2/everything?language=en&q=(video game) +game +technology&pageSize=8&sortBy=publishedAt&apiKey=";
 

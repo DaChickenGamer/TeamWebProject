@@ -4,16 +4,17 @@
     box-sizing: border-box;
 }
 .login-body {
-    background-color: #4B56D2;
+    background-color: #ffffff;
 }
 .login {
     width: 360px;
     height: min-content;
     padding: 20px;
     border-radius: 12px;
-    background: #ffffff;
+    background: #ebebeb;
     margin-top: 10%;
     display: inline-block;
+    border: 2px outset rgb(172, 172, 172);
 }
 .login h1{
     font-size: 36px;
